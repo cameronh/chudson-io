@@ -1,0 +1,36 @@
+.brand-links {
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+    fill: $color-primary;
+    cursor: pointer;
+  }
+
+  svg:hover {
+    fill: $color-primary-light-grey;
+  }
+}
+
+.link {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    height: .2rem;
+    width: 0;
+    background-color: $color-primary;
+    transition: all .3s;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}

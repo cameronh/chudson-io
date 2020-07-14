@@ -1,0 +1,140 @@
+.skills {
+  padding: 10rem 8rem;
+
+  grid-column: 1 / -1;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(min-content, max-content));
+
+  &__heading {
+    grid-column: 3 / 5;
+    align-self: center;
+    justify-self: center;
+    color: #fff;
+  }
+
+  &__divider {
+    grid-column: 3 / 5;
+    width: 60%;
+    justify-self: center;
+    align-self: start;
+    border: .2rem solid $color-primary;
+  }
+
+  &__description {
+    grid-column: 1 / -1;
+    color: rgba($color-primary-light, .7);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__languages {
+    list-style: none;
+    color: #fff;
+    margin: 5rem 0;
+
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-evenly;
+
+    &--item {
+      padding: 2rem;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      font-weight: 600;
+    }
+  }
+
+  &__frameworks,
+  &__tools {
+    color: #fff;
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+  &__frameworks {
+    grid-column: 2 / 3;
+
+    &--heading {
+      text-align: center;
+    }
+
+    &__list {
+      list-style: none;
+      columns: 2;
+      &--item {
+        margin-bottom: .7rem;
+        text-indent: -3rem;
+        margin-left: 3rem;
+        font-size: 1.4rem;
+        color: rgba(255, 255, 255, .8);
+      }
+
+      &--item::before {
+        content: "";
+        display: inline-block;
+        vertical-align: sub;
+        height: 2rem;
+        width: 2rem;
+        margin-right: .7rem;
+
+        background-image: url(../img/chevron-small-right.svg);
+        background-size: cover;
+
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+          background-color: $color-primary-dark;
+          -webkit-mask-image: url(../img/chevron-small-right.svg);
+          -webkit-mask-size: cover;
+          mask-image: url(../img/chevron-small-right.svg);
+          mask-size: cover;
+          background-image: none;
+        }
+      }
+    }
+    
+  }
+
+  &__tools {
+    grid-column: 5 / 6;
+
+    &--heading {
+      text-align: center;
+    }
+    
+    &__list {
+      list-style: none;
+      columns: 2;
+
+      &--item {
+        margin-bottom: .7rem;
+        text-indent: -3rem;
+        margin-left: 3rem;
+        font-size: 1.4rem;
+        color: rgba(255, 255, 255, .8);
+      }
+
+      &--item::before {
+        content: "";
+        display: inline-block;
+        vertical-align: sub;
+        height: 2rem;
+        width: 2rem;
+        margin-right: .7rem;
+
+        background-image: url(../img/chevron-small-right.svg);
+        background-size: cover;
+
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+          background-color: $color-primary-dark;
+          -webkit-mask-image: url(../img/chevron-small-right.svg);
+          -webkit-mask-size: cover;
+          mask-image: url(../img/chevron-small-right.svg);
+          mask-size: cover;
+          background-image: none;
+        }
+      }
+    }
+  }
+}

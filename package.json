@@ -1,0 +1,16 @@
+{
+  "name": "chudson_io",
+  "version": "1.0.0",
+  "description": "A personal portfolio website",
+  "scripts": {
+    "watch:sass": "node-sass scss/main.scss css/main.css -w",
+    "devserver": "live-server --host=0.0.0.0 --browser=firefox",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "Cameron Hudson",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5"
+  }
+}

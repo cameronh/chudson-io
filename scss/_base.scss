@@ -1,0 +1,53 @@
+$color-primary-light: #F3F2F2;
+$color-primary-light-grey: #8B8E97;
+$color-primary: #7898B6;
+$color-primary-dark: #7C6E87;
+$color-primary-dark-grey: #303A58;
+
+$color-secondary-light: #2c3142;
+$color-secondary: #222533;
+$color-secondary-dark: #1c1f2c;
+
+$bp-huge: 81.25em;      // 1300px+
+$bp-largest: 75em;    // 1200px
+$bp-larger: 68.75em;  // 1100px
+$bp-large: 62.5em;    // 1000px
+$bp-medium: 50em;     // 800px
+$bp-small: 37.5em;    // 600px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  background-color: $color-secondary-dark;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 55%;
+  }
+}
+
+.container {
+  display: grid;
+
+  grid-template-columns: 8rem repeat(4, 1fr) 8rem;
+
+  @media only screen and (min-width: $bp-huge) {
+    margin: 0 auto;
+  }
+}
+
+.external-link-icon {
+  margin-top: .145rem;
+}
+
+.mb-sm { margin-bottom: 2rem; }
+.mb-md { margin-bottom: 3rem; }
+.mb-lg { margin-bottom: 4rem; }
+.mb-hg { margin-bottom: 8rem; }

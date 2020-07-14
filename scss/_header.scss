@@ -1,0 +1,98 @@
+.header {
+  color: $color-primary-light;
+  background-image: linear-gradient(rgba($color-secondary-dark, .9), rgba($color-secondary-dark, .9)), url(../img/bg.jpg);
+  background-size: cover;
+
+  padding: 8rem;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0;
+  }
+
+  grid-column: 1 / -1;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(min-content, max-content));
+  grid-template-columns: 1fr;
+  align-content: center;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      width: 0;
+    }
+
+    100% {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-left {
+    0% {
+      opacity: 0;
+      transform: translateX(10rem);
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  &__name {
+    font-size: 5rem;
+    font-weight: 700;
+    justify-self: center;
+    align-self: center;
+    text-transform: uppercase;
+    letter-spacing: .7rem;
+
+    animation: slide-right 1s ease-out;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 4.5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 4rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 3.5rem;
+      letter-spacing: .4rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 300;
+    justify-self: center;
+    align-self: center;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin-top: .8rem;
+    animation: slide-left 1s ease-out;
+  }
+
+  &__divider {
+    width: 100%;
+    max-width: 38.3rem;
+    justify-self: center;
+    align-self: center;
+    border: .2rem solid $color-primary;
+    animation: fade-in 1.2s ease-in-out;
+  }
+}

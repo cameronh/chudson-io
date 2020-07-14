@@ -1,0 +1,151 @@
+.about {
+  padding: 10rem 8rem;
+
+  grid-column: 1 / -1;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 30rem));
+  grid-template-rows: repeat(3, minmax(min-content, max-content));
+
+  @media only screen and (min-width: $bp-huge) {
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 10rem 2rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    height: 80vh;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    height: 100vh;
+  }
+
+  &__heading {
+    grid-column: 1 / -1;
+    align-self: center;
+    justify-self: center;
+    color: #fff;
+  }
+
+  &__divider {
+    grid-column: 1 / -1;
+    width: 25%;
+    justify-self: center;
+    align-self: start;
+    border: .2rem solid $color-primary;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
+  }
+
+  &__photo {
+    grid-column: 1 / 2;
+    width: 80%;
+    border-radius: 50%;
+    transform: translateY(-3rem);
+    margin-top: 8rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 4rem;
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+      transform: translateY(1rem);
+      width: 100%;
+    }
+  }
+
+  &__bio,
+  &__interests {
+    color: $color-primary-light;
+    font-size: 1.4rem;
+    width: 90%;
+    margin-top: 8rem;
+
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 4rem;
+      font-size: 1.6rem;
+    }
+
+    a {
+      color: $color-primary;
+      text-decoration: none;
+    }
+  }
+
+  &__bio {
+    grid-column: 2 / 4;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      grid-column: 1 / -1;
+      grid-row: 4 / 5;
+    }
+
+    &--heading {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  &__interests {
+    grid-column: 4 / 6;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      grid-column: 1 / -1;
+      grid-row: 5 / 6;
+    }
+
+    &--heading {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.7rem;
+      }
+    }
+
+    &__list {
+      list-style: none;
+      columns: 3;
+      li {
+        margin-bottom: .7rem;
+        text-indent: -3rem;
+        margin-left: 3rem;
+        font-size: 1.4rem;
+        color: rgba(255, 255, 255, .8);
+      }
+
+      li::before {
+        content: "";
+        display: inline-block;
+        vertical-align: sub;
+        height: 2rem;
+        width: 2rem;
+        margin-right: .7rem;
+
+        background-image: url(../img/chevron-small-right.svg);
+        background-size: cover;
+
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+          background-color: $color-primary-dark;
+          -webkit-mask-image: url(../img/chevron-small-right.svg);
+          -webkit-mask-size: cover;
+          mask-image: url(../img/chevron-small-right.svg);
+          mask-size: cover;
+          background-image: none;
+        }
+      }
+    }
+  }
+}
