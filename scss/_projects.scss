@@ -176,9 +176,14 @@
         fill: rgba($color-primary-light, .85);
         width: 3rem;
         height: 3rem;
+        transition: all .2s;
         
         &:not(:last-child) {
           margin-right: 2rem;
+        }
+
+        &:hover {
+          fill: $color-primary;
         }
       }
     }
