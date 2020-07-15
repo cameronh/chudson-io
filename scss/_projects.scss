@@ -172,7 +172,8 @@
         grid-row: 1/ 2;
       }
 
-      svg {
+      a,svg {
+        outline: none;
         fill: rgba($color-primary-light, .85);
         width: 3rem;
         height: 3rem;
@@ -184,6 +185,7 @@
 
         &:hover {
           fill: $color-primary;
+          transform: translateY(-.1rem);
         }
       }
     }
@@ -304,13 +306,20 @@
         justify-content: flex-end;
       }
 
-      svg {
+      a,svg {
+        outline: none;
         fill: rgba($color-primary-light, .85);
         width: 3rem;
         height: 3rem;
+        transition: all .2s;
         
         &:not(:last-child) {
           margin-right: 2rem;
+        }
+
+        &:hover {
+          fill: $color-primary;
+          transform: translateY(-.1rem);
         }
       }
     }
